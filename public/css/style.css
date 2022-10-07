@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #1f3229;
+  color: #84a98c;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 50px;
+  }
+}
+header .navigation-barre {
+  display: none;
+  gap: 2vw;
+}
+@media screen and (min-width: 768px) {
+  header .navigation-barre {
+    display: flex;
+    align-items: center;
+  }
+}
+header .logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  display: block;
+}
+header .hamburger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  header .hamburger-menu {
+    display: none;
+  }
+}
+header .hamburger-menu__barre {
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #84a98c;
+  margin: 5px;
+}
+header .menu-depliant {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1f3229;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  /*font-family: $policeheader;*/
+  font-size: 22px;
+  animation: apparition 0.3s;
+}
+header .menu-depliant ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+header .menu-depliant__croix {
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+header .menu-depliant__croix__barre {
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #84a98c;
+}
+header .menu-depliant__croix__barre:nth-child(1) {
+  transform: rotate(-45deg) translateX(-2px);
+}
+header .menu-depliant__croix__barre:nth-child(2) {
+  transform: rotate(45deg) translateX(-4px);
+}
+
+@keyframes apparition {
+  from {
+    height: 0vh;
+  }
+  to {
+    height: 100vh;
+  }
+}
+.inactive {
+  display: none !important;
+}
+
+.call-us {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .call-us {
+    display: none;
+  }
+}
+
+.header-minimize {
+  padding: 20px 30px;
+  transition: 0.4s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  color: unset;
+}
+
+a:visited {
+  color: unset;
+}
+
+.banniere {
+  background: url(/public/img/istockphoto-1211547141-612x612.jpeg) fixed no-repeat;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: auto 400px;
+}
+@media screen and (min-width: 700px) {
+  .banniere {
+    height: 500px;
+    background-size: auto 510px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banniere {
+    background-size: cover;
+    height: 650px;
+  }
+}
+.banniere .fond-noir {
+  background: rgba(0, 0, 0, 0.48);
+  width: 100vw;
+  height: 100%;
+}
+
+.presentation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #1f3229;
+  background: #52796f;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .presentation {
+    gap: 5vw;
+    padding: 50px;
+  }
+}
+.presentation__paragraphe {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .presentation__paragraphe {
+    width: 55%;
+    max-width: 600px;
+    line-height: 24px;
+  }
+}
+.presentation .liens-conteneurs {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .presentation .liens-conteneurs {
+    width: 35%;
+  }
+}
+.presentation__lien {
+  font-family: "Raleway", sans-serif;
+  width: 300;
+  margin: 5px 0;
+  width: auto;
+  display: inline;
+}
+.presentation__lien::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #1f3229;
+}
+.presentation__lien:hover::after {
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.presentation__image-conteneur {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .presentation__image-conteneur {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.presentation__image-conteneur img {
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .presentation__image-conteneur img {
+    width: 40vw;
+  }
+}
+
+.lien-1::after {
+  width: 95px;
+}
+
+.lien-2::after {
+  width: 67px;
+}
+
+@keyframes glisse {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(-1);
+  }
+}
+.menu-overview {
+  font-family: "Raleway", sans-serif;
+  padding: 30px;
+  background: #52796f;
+  color: #1f3229;
+}
+@media screen and (min-width: 768px) {
+  .menu-overview {
+    padding: 50px;
+  }
+}
+.menu-overview h2 {
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.menu-overview__card-conteneur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .menu-overview__card-conteneur {
+    flex-direction: row;
+  }
+}
+.menu-overview__card-conteneur .card {
+  color: #84a98c;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 300px;
+  justify-content: space-between;
+  padding: 30px;
+  transition: 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .menu-overview__card-conteneur .card {
+    height: 400px;
+  }
+}
+.menu-overview__card-conteneur .dessert {
+  background: url(/public/img/26088407.webp);
+  background-size: auto 100%;
+}
+.menu-overview__card-conteneur .dessert:hover {
+  background-size: auto 105% !important;
+}
+.menu-overview__card-conteneur .pizza {
+  background: url(/public/img/da-graziella-pizza-margherita-paris_6075890.jpeg);
+  background-size: auto 100%;
+}
+.menu-overview__card-conteneur .pizza:hover {
+  background-size: auto 105% !important;
+}
+.menu-overview__card-conteneur .pates {
+  background: url(/public/img/pates-sauce-mediterraneenne-scaled.jpeg);
+  background-size: 100%;
+}
+.menu-overview__card-conteneur .pates:hover {
+  background-size: 105% !important;
+}
+
+.autre {
+  font-family: "Raleway", sans-serif;
+  color: #84a98c;
+  letter-spacing: 1px;
+  background: #1f3229;
+  padding: 30px 7vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.autre h2 {
+  margin-bottom: 10px;
+}
+.autre div {
+  margin: 20px 0;
+}
+.autre__horaire {
+  width: 50%;
+}
+.autre__horaire__jour {
+  margin: 5px 0;
+  display: inline-block;
+}
+.autre__coordonnee {
+  width: max-content;
+}
+.autre__coordonnee__telephone, .autre__coordonnee__adresse, .autre__coordonnee__mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.autre__carte {
+  width: 80vw;
+}
+.autre__carte__plan {
+  min-width: 100%;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .autre__carte__plan {
+    height: 350px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #eaf4f4;
+  color: #84a98c;
+  gap: 35px;
+  padding: 50px 0 50px 0;
+}
+.footer h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 38px;
+}
+.footer p {
+  text-align: center;
+  max-width: 80%;
+  font-family: "Raleway", sans-serif;
+}
+.footer__reseau-sociaux {
+  display: flex;
+  gap: 15px;
+}
+.footer .footer-logo {
+  fill: #84a98c;
+  width: 35px;
+  height: 35px;
+}
+.footer .footer-logo:hover {
+  fill: #52755a;
+}
+
+.footer-style-2 {
+  background: #0b130f;
+  color: #84a98c;
+}
+
+.menu {
+  margin-top: 80px;
+  padding: 50px 7vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  background: #52796f;
+  color: #1f3229;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    margin-top: 145px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 2vw;
+    grid-row-gap: 40px;
+  }
+}
+.menu__food {
+  width: 100%;
+  margin: 20px 0;
+}
+.menu__food__nom {
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 30px 0;
+  justify-content: center;
+  width: 100%;
+}
+.menu__food__nom::after, .menu__food__nom::before {
+  content: "";
+  display: inline-block;
+  width: 7%;
+  height: 3px;
+  background: #625834;
+}
+.menu__food__details__plat {
+  margin: 5px 0;
+}
+.menu__food__details__plat__details {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__food__details__plat__description {
+  font-weight: 300;
+  max-width: 70%;
+}
+
+.call-us-btn {
+  background: #84a98c;
+  border: 2px solid #84a98c;
+  color: #1f3229 !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.call-us-btn:hover {
+  background: #1f3229;
+  color: #84a98c !important;
+  border: 2px solid #84a98c;
+  transition: 0.2s;
+}
+
+/*# sourceMappingURL=style.css.map */
