@@ -292,21 +292,21 @@ a:visited {
   }
 }
 .menu-overview__card-conteneur .dessert {
-  background: url(public/img/26088407.webp);
+  background: url(../img/26088407.webp);
   background-size: auto 100%;
 }
 .menu-overview__card-conteneur .dessert:hover {
   background-size: auto 105% !important;
 }
 .menu-overview__card-conteneur .pizza {
-  background: url(public/img/da-graziella-pizza-margherita-paris_6075890.jpeg);
+  background: url(../img/da-graziella-pizza-margherita-paris_6075890.jpeg);
   background-size: auto 100%;
 }
 .menu-overview__card-conteneur .pizza:hover {
   background-size: auto 105% !important;
 }
 .menu-overview__card-conteneur .pates {
-  background: url(public/img/pates-sauce-mediterraneenne-scaled.jpeg);
+  background: url(../img/pates-sauce-mediterraneenne-scaled.jpeg);
   background-size: 100%;
 }
 .menu-overview__card-conteneur .pates:hover {
