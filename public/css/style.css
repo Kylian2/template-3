@@ -133,7 +133,7 @@ a:visited {
 }
 
 .banniere {
-  background: url(public/img/istockphoto-1211547141-612x612.jpeg) fixed no-repeat;
+  background: url(../img/istockphoto-1211547141-612x612.jpeg) fixed no-repeat;
   height: 400px;
   background-repeat: no-repeat;
   background-size: auto 400px;
